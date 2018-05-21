@@ -34,7 +34,7 @@ $___bootstrap = function( Shell\Application &$app )
 
 		$sourceFile = dirname( __DIR__ ) . '/source.gif';
 		$media1 = $connection->upload( 'media/upload', ['media' => $sourceFile ] );
-		$parameters = ['media_ids' => $media1->media_id_string];
+		$parameters = ['media_ids' => $media1->media_id_string, 'status' => 'Rise and shine, and don’t forget your booties ‘cause it’s coooooold out there today'];
 
 		$result = $connection->post( "statuses/update", $parameters );
 	};
